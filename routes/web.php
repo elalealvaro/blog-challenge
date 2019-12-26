@@ -24,7 +24,7 @@ Route::put('/user/{user}', 'UserController@update')->name('user.update')->middle
 Route::get('/user/{user}/tweet', 'UserController@tweet')->name('user.tweet');
 
 // Entry routes
-Route::get('/entry', 'EntryController@create')->name('entry.create');
+Route::get('/entry', 'EntryController@create')->name('entry.create')->middleware('auth');
 Route::post('/entry', 'EntryController@save')->name('entry.save')->middleware('auth');
 Route::get('/entry/{entry}', 'EntryController@index')->name('entry');
 Route::get('/entry/{entry}/edit', 'EntryController@edit')->name('entry.edit')->middleware('auth');

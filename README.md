@@ -48,6 +48,13 @@ Run migrations with `php artisan migrate`
 Note:
 * db can be seeded with dummy data by adding `--seed`. This will add 30 users and 300 entries assigned randomly.
 
+## Testing
+
+Run `vendor/bin/phpunit`
+
+Note:
+* Tests will use an **in memory database** to generate dummy data.
+
 ## Database structure
 
 Apart from the basic tables that Laravel generates for `password_resets` and `failed_jobs`, this project contains 3 tables:
